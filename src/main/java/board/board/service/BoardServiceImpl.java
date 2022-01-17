@@ -30,6 +30,6 @@ public class BoardServiceImpl implements BoardService {
 		boardMapper.updateHitCount(boardIdx);
 		
 		BoardDto board = boardMapper.selectBoardDetail(boardIdx);
-		return null;
+		return board;
 	}
 }
