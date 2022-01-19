@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="true">
+	<!-- Appenders -->
+	<appender name="console" class ="ch.qos.logback.core.ConsoleAppender"> <!-- appender 로그를 어디에 출력할지 (콘솔, 파일 기록, db저장 등) 결정 -->
+		<encoder> <!-- <appender 에 포함되는 태그, 출력될 로그 형식을 지정 -->
+			<Pattern>%d %5p [%c] %m%n</Pattern>
+		</encoder>
+	</appender>
+
+	<appender name="console-infolog" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<Pattern>%d %5p %m%n</Pattern>
+		</encoder>
+	</appender>
+	
+	<!-- logger -->
+	<logger name="board" level="DEBUG" appender-ref="console"/> <!-- 로그를 출력하는 요소로 level속성을 통해 출력할 로그의 레벨을 조절하여 appender에 전달, debug레벨의 로그를 출력하는 형식은 appender-ref속성에 적힌 console이라는 이름을 가진 appender를 사용 -->
+	<root level="off">
+		<appender-ref ref="console"></appender-ref>
+	</root>
+</configuration>
