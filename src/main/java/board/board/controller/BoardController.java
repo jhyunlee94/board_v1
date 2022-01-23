@@ -1,6 +1,7 @@
 package board.board.controller;
 
 import java.util.List;
+import lombok.extern.slf4j.Slf4j;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,6 +14,7 @@ import board.board.service.BoardService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 @Controller
+@Slf4j
 public class BoardController {
 
 	private Logger log = LoggerFactory.getLogger(this.getClass());
