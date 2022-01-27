@@ -10,7 +10,7 @@ import board.interceptor.LoggerInterceptor;
 public class WebMvcConfiguration implements WebMvcConfigurer{
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
-		registry.addInterceptor(new LoggerInterceptor());
+		registry.addInterceptor(new LoggerInterceptor()); // 인터셉터를 등록
 	}
 
 }
