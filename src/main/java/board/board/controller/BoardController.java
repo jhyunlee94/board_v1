@@ -30,7 +30,7 @@ public class BoardController {
         	log.debug("openBoardList");
         	
             ModelAndView mv = new ModelAndView("/board/boardList");
-
+            //int i = 10/0; 예외처리 테스트 ExceptionHandller.java, error_Default.html
             List<BoardDto> list = boardService.selectBoardList();
             mv.addObject("list", list);
 
